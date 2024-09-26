@@ -1,0 +1,9 @@
+{
+  "extends": "@total-typescript/tsconfig/bundler/no-dom/library",
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["./*.{ts,js}", "./src"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "piklematestswagger",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.11.0",
+  "author": "keupoz",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:openapi": "openapi-typescript https://petstore3.swagger.io/api/v3/openapi.yaml -o ./src/openapi/petstore.ts",
+    "build": "npm run generate:openapi && tsup",
+    "start": "npm run build && node ./dist/index.js"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.12.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.2",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^22.7.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-format": "^0.1.2",
+    "openapi-typescript": "^7.4.1",
+    "punycode": "^2.3.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
+  }
+}
